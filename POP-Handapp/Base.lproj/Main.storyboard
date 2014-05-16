@@ -110,6 +110,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <segue destination="uKW-wv-DK4" kind="push" id="81e-Y5-APr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -255,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="64"/>
+            <point key="canvasLocation" x="1088" y="-632"/>
         </scene>
         <!--Decay View Controller - Detail-->
         <scene sceneID="3jE-mk-oa0">
@@ -318,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6l-uF-Mmu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="735"/>
+            <point key="canvasLocation" x="1586" y="-402"/>
         </scene>
         <!--Basic View Controller - Detail-->
         <scene sceneID="ADI-ku-SW8">
@@ -343,7 +346,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z67-s0-2aN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="735"/>
+            <point key="canvasLocation" x="1088" y="743"/>
+        </scene>
+        <!--Property View Controller - Detail-->
+        <scene sceneID="2QC-gN-beq">
+            <objects>
+                <viewController title="Detail" id="uKW-wv-DK4" customClass="PDPropertyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="seQ-U4-VDz"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Yl-3A-1nU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C0q-Dk-uV0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TvB-HO-h4m">
+                                <rect key="frame" x="0.0" y="213" width="320" height="142"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animation" id="ffa-J0-jB2">
+                        <barButtonItem key="rightBarButtonItem" title="Effects" id="Bm6-NO-1bd">
+                            <connections>
+                                <action selector="showEffects:" destination="uKW-wv-DK4" id="CCY-la-PEb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countingLabel" destination="TvB-HO-h4m" id="hCy-DG-3VJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kW-PN-Psg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="58"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
