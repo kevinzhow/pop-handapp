@@ -11,7 +11,7 @@
 
 @implementation PDAnimationManager
 
-+(void)springObject:(CALayer*)layer configAnimation:(POPSpringAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated;
++(void)springObject:(CALayer*)layer configAnimation:(POPPropertyAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated
 {
     //For scale
     if ([type isEqualToString:kPOPLayerScaleXY]) {
