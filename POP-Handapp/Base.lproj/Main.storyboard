@@ -233,6 +233,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.998" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZuT-f1-syB">
                                 <rect key="frame" x="18" y="518" width="284" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slideChanged:" destination="BJQ-46-glD" eventType="valueChanged" id="hDl-8z-aNN"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Deceleration" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7x0-pZ-6g3">
                                 <rect key="frame" x="20" y="500" width="70" height="21"/>
@@ -241,17 +244,37 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="x2P-f5-msE">
+                                <rect key="frame" x="18" y="462" width="284" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slideChanged:" destination="BJQ-46-glD" eventType="valueChanged" id="eg8-vz-53U"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Velocity" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzd-sB-BsE">
+                                <rect key="frame" x="20" y="443" width="70" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="x2P-f5-msE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zzd-sB-BsE" secondAttribute="bottom" constant="5" id="2m1-eO-cpV"/>
                             <constraint firstItem="ZuT-f1-syB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7x0-pZ-6g3" secondAttribute="bottom" constant="5" id="eSd-JF-2Qh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Animation" id="hFy-cl-5uh">
-                        <barButtonItem key="rightBarButtonItem" title="Effects" id="PV1-zi-TMK"/>
+                        <barButtonItem key="rightBarButtonItem" title="Effects" id="PV1-zi-TMK">
+                            <connections>
+                                <action selector="showEffects:" destination="BJQ-46-glD" id="62b-HN-5an"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="decelerationSlider" destination="ZuT-f1-syB" id="rvX-3h-PE4"/>
+                        <outlet property="velocitySlider" destination="x2P-f5-msE" id="aUD-Wc-VZH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6l-uF-Mmu" sceneMemberID="firstResponder"/>

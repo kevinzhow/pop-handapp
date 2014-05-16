@@ -11,6 +11,7 @@
 
 @interface PDAnimationManager : NSObject
 
-+(void)object:(CALayer*)layer configAnimation:(POPSpringAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated;
++(void)springObject:(CALayer*)layer configAnimation:(POPSpringAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated;
++(void)decayObject:(CALayer*)layer configAnimation:(POPDecayAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated andVelocitySlider:(UISlider *)slider;
 
 @end

@@ -61,19 +61,21 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self resetCircle];
+
     self.animationType = [self.animationTypes objectAtIndex:indexPath.row];
     [self hideTableView];
 }
 
 -(void)hideTableView
 {
+    [self resetCircle];
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
     anim.toValue = [NSValue valueWithCGPoint:CGPointMake(self.view.window.center.x, -1000.0)];
     [self.tableView pop_addAnimation:anim forKey:@"AnimationHide"];
     
     anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
         if (finished) {
+            
             [self performAnimation];
         }
     };
@@ -84,7 +86,7 @@
     [self.popCircle pop_removeAllAnimations];
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:self.animationType];
     
-    [PDAnimationManager object:self.popCircle configAnimation:anim WithType:self.animationType andAnimated:self.animated];
+    [PDAnimationManager springObject:self.popCircle configAnimation:anim WithType:self.animationType andAnimated:self.animated];
     
     self.animated = !self.animated;
     anim.springBounciness = bounciness;
@@ -112,9 +114,6 @@
 
     [self.popCircle pop_addAnimation:anim forKey:@"Animation"];
     
-    self.bouncinessSlider.value = bounciness;
-    
-    self.speedSlider.value = speed;
 }
 
 -(void)performAnimation

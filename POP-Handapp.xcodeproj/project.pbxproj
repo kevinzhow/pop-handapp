@@ -129,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				0A54BFD91926231500341AFB /* Decay */,
+				0A54BFE31926232900341AFB /* Spring */,
 				0A54BFB0192622C400341AFB /* PDAppDelegate.h */,
 				0A54BFB1192622C400341AFB /* PDAppDelegate.m */,
 				0A54BFB3192622C400341AFB /* Main.storyboard */,
@@ -136,7 +137,6 @@
 				0A54BFB7192622C400341AFB /* PDMasterViewController.m */,
 				0A54BFDC1926231500341AFB /* PDAnimationManager.h */,
 				0A54BFDD1926231500341AFB /* PDAnimationManager.m */,
-				0A54BFE31926232900341AFB /* Spring */,
 				0A54BFBC192622C400341AFB /* Images.xcassets */,
 				0A54BFA8192622C400341AFB /* Supporting Files */,
 			);
