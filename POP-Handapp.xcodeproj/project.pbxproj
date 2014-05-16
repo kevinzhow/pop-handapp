@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A54BFA2192622C400341AFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA1192622C400341AFB /* Foundation.framework */; };
+		0A54BFA4192622C400341AFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA3192622C400341AFB /* CoreGraphics.framework */; };
+		0A54BFA6192622C400341AFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA5192622C400341AFB /* UIKit.framework */; };
+		0A54BFAC192622C400341AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFAA192622C400341AFB /* InfoPlist.strings */; };
+		0A54BFAE192622C400341AFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFAD192622C400341AFB /* main.m */; };
+		0A54BFB2192622C400341AFB /* PDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFB1192622C400341AFB /* PDAppDelegate.m */; };
+		0A54BFB5192622C400341AFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFB3192622C400341AFB /* Main.storyboard */; };
+		0A54BFB8192622C400341AFB /* PDMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFB7192622C400341AFB /* PDMasterViewController.m */; };
+		0A54BFBD192622C400341AFB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFBC192622C400341AFB /* Images.xcassets */; };
+		0A54BFC4192622C400341AFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFC3192622C400341AFB /* XCTest.framework */; };
+		0A54BFC5192622C400341AFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA1192622C400341AFB /* Foundation.framework */; };
+		0A54BFC6192622C400341AFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA5192622C400341AFB /* UIKit.framework */; };
+		0A54BFCE192622C400341AFB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFCC192622C400341AFB /* InfoPlist.strings */; };
+		0A54BFD0192622C400341AFB /* POP_HandappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFCF192622C400341AFB /* POP_HandappTests.m */; };
+		0A54BFE01926231500341AFB /* PDDecayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDB1926231500341AFB /* PDDecayViewController.m */; };
+		0A54BFE11926231500341AFB /* PDAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDD1926231500341AFB /* PDAnimationManager.m */; };
+		0A54BFE21926231500341AFB /* PDSpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDF1926231500341AFB /* PDSpringViewController.m */; };
+		0A54BFE619265D0F00341AFB /* POP-Handapp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFE419265D0F00341AFB /* POP-Handapp-Info.plist */; };
+		390FA0C4D62045DA8353F441 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 813F742214324DAFAA5B19CB /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A54BFC7192622C400341AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A54BF96192622C400341AFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A54BF9D192622C400341AFB;
+			remoteInfo = "POP-Handapp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A54BF9E192622C400341AFB /* POP-Handapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POP-Handapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A54BFA1192622C400341AFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A54BFA3192622C400341AFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A54BFA5192622C400341AFB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A54BFAB192622C400341AFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A54BFAD192622C400341AFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A54BFB0192622C400341AFB /* PDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDAppDelegate.h; sourceTree = "<group>"; };
+		0A54BFB1192622C400341AFB /* PDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDAppDelegate.m; sourceTree = "<group>"; };
+		0A54BFB4192622C400341AFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0A54BFB6192622C400341AFB /* PDMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PDMasterViewController.h; sourceTree = "<group>"; };
+		0A54BFB7192622C400341AFB /* PDMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PDMasterViewController.m; sourceTree = "<group>"; };
+		0A54BFBC192622C400341AFB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0A54BFC2192622C400341AFB /* POP-HandappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "POP-HandappTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A54BFC3192622C400341AFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0A54BFCB192622C400341AFB /* POP-HandappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "POP-HandappTests-Info.plist"; sourceTree = "<group>"; };
+		0A54BFCD192622C400341AFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A54BFCF192622C400341AFB /* POP_HandappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POP_HandappTests.m; sourceTree = "<group>"; };
+		0A54BFDA1926231500341AFB /* PDDecayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDDecayViewController.h; sourceTree = "<group>"; };
+		0A54BFDB1926231500341AFB /* PDDecayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDDecayViewController.m; sourceTree = "<group>"; };
+		0A54BFDC1926231500341AFB /* PDAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAnimationManager.h; sourceTree = "<group>"; };
+		0A54BFDD1926231500341AFB /* PDAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAnimationManager.m; sourceTree = "<group>"; };
+		0A54BFDE1926231500341AFB /* PDSpringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDSpringViewController.h; sourceTree = "<group>"; };
+		0A54BFDF1926231500341AFB /* PDSpringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDSpringViewController.m; sourceTree = "<group>"; };
+		0A54BFE419265D0F00341AFB /* POP-Handapp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "POP-Handapp-Info.plist"; sourceTree = "<group>"; };
+		0A54BFE519265D0F00341AFB /* POP-Handapp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POP-Handapp-Prefix.pch"; sourceTree = "<group>"; };
+		3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		813F742214324DAFAA5B19CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A54BF9B192622C400341AFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFA4192622C400341AFB /* CoreGraphics.framework in Frameworks */,
+				0A54BFA6192622C400341AFB /* UIKit.framework in Frameworks */,
+				0A54BFA2192622C400341AFB /* Foundation.framework in Frameworks */,
+				390FA0C4D62045DA8353F441 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A54BFBF192622C400341AFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFC4192622C400341AFB /* XCTest.framework in Frameworks */,
+				0A54BFC6192622C400341AFB /* UIKit.framework in Frameworks */,
+				0A54BFC5192622C400341AFB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A54BF95192622C400341AFB = {
+			isa = PBXGroup;
+			children = (
+				0A54BFA7192622C400341AFB /* POP-Handapp */,
+				0A54BFC9192622C400341AFB /* POP-HandappTests */,
+				0A54BFA0192622C400341AFB /* Frameworks */,
+				0A54BF9F192622C400341AFB /* Products */,
+				3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		0A54BF9F192622C400341AFB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BF9E192622C400341AFB /* POP-Handapp.app */,
+				0A54BFC2192622C400341AFB /* POP-HandappTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A54BFA0192622C400341AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFA1192622C400341AFB /* Foundation.framework */,
+				0A54BFA3192622C400341AFB /* CoreGraphics.framework */,
+				0A54BFA5192622C400341AFB /* UIKit.framework */,
+				0A54BFC3192622C400341AFB /* XCTest.framework */,
+				813F742214324DAFAA5B19CB /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A54BFA7192622C400341AFB /* POP-Handapp */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFD91926231500341AFB /* Decay */,
+				0A54BFB0192622C400341AFB /* PDAppDelegate.h */,
+				0A54BFB1192622C400341AFB /* PDAppDelegate.m */,
+				0A54BFB3192622C400341AFB /* Main.storyboard */,
+				0A54BFB6192622C400341AFB /* PDMasterViewController.h */,
+				0A54BFB7192622C400341AFB /* PDMasterViewController.m */,
+				0A54BFDC1926231500341AFB /* PDAnimationManager.h */,
+				0A54BFDD1926231500341AFB /* PDAnimationManager.m */,
+				0A54BFE31926232900341AFB /* Spring */,
+				0A54BFBC192622C400341AFB /* Images.xcassets */,
+				0A54BFA8192622C400341AFB /* Supporting Files */,
+			);
+			path = "POP-Handapp";
+			sourceTree = "<group>";
+		};
+		0A54BFA8192622C400341AFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFE419265D0F00341AFB /* POP-Handapp-Info.plist */,
+				0A54BFE519265D0F00341AFB /* POP-Handapp-Prefix.pch */,
+				0A54BFAA192622C400341AFB /* InfoPlist.strings */,
+				0A54BFAD192622C400341AFB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A54BFC9192622C400341AFB /* POP-HandappTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFCF192622C400341AFB /* POP_HandappTests.m */,
+				0A54BFCA192622C400341AFB /* Supporting Files */,
+			);
+			path = "POP-HandappTests";
+			sourceTree = "<group>";
+		};
+		0A54BFCA192622C400341AFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFCB192622C400341AFB /* POP-HandappTests-Info.plist */,
+				0A54BFCC192622C400341AFB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A54BFD91926231500341AFB /* Decay */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFDA1926231500341AFB /* PDDecayViewController.h */,
+				0A54BFDB1926231500341AFB /* PDDecayViewController.m */,
+			);
+			path = Decay;
+			sourceTree = "<group>";
+		};
+		0A54BFE31926232900341AFB /* Spring */ = {
+			isa = PBXGroup;
+			children = (
+				0A54BFDE1926231500341AFB /* PDSpringViewController.h */,
+				0A54BFDF1926231500341AFB /* PDSpringViewController.m */,
+			);
+			name = Spring;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A54BF9D192622C400341AFB /* POP-Handapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A54BFD3192622C400341AFB /* Build configuration list for PBXNativeTarget "POP-Handapp" */;
+			buildPhases = (
+				BB4E7CF38A974965BCE2803D /* Check Pods Manifest.lock */,
+				0A54BF9A192622C400341AFB /* Sources */,
+				0A54BF9B192622C400341AFB /* Frameworks */,
+				0A54BF9C192622C400341AFB /* Resources */,
+				762826E72CA249C59AC17725 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "POP-Handapp";
+			productName = "POP-Handapp";
+			productReference = 0A54BF9E192622C400341AFB /* POP-Handapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A54BFC1192622C400341AFB /* POP-HandappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A54BFD6192622C400341AFB /* Build configuration list for PBXNativeTarget "POP-HandappTests" */;
+			buildPhases = (
+				0A54BFBE192622C400341AFB /* Sources */,
+				0A54BFBF192622C400341AFB /* Frameworks */,
+				0A54BFC0192622C400341AFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A54BFC8192622C400341AFB /* PBXTargetDependency */,
+			);
+			name = "POP-HandappTests";
+			productName = "POP-HandappTests";
+			productReference = 0A54BFC2192622C400341AFB /* POP-HandappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A54BF96192622C400341AFB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Piner;
+				TargetAttributes = {
+					0A54BFC1192622C400341AFB = {
+						TestTargetID = 0A54BF9D192622C400341AFB;
+					};
+				};
+			};
+			buildConfigurationList = 0A54BF99192622C400341AFB /* Build configuration list for PBXProject "POP-Handapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A54BF95192622C400341AFB;
+			productRefGroup = 0A54BF9F192622C400341AFB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A54BF9D192622C400341AFB /* POP-Handapp */,
+				0A54BFC1192622C400341AFB /* POP-HandappTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A54BF9C192622C400341AFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFBD192622C400341AFB /* Images.xcassets in Resources */,
+				0A54BFAC192622C400341AFB /* InfoPlist.strings in Resources */,
+				0A54BFB5192622C400341AFB /* Main.storyboard in Resources */,
+				0A54BFE619265D0F00341AFB /* POP-Handapp-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A54BFC0192622C400341AFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFCE192622C400341AFB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		762826E72CA249C59AC17725 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB4E7CF38A974965BCE2803D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A54BF9A192622C400341AFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFB2192622C400341AFB /* PDAppDelegate.m in Sources */,
+				0A54BFB8192622C400341AFB /* PDMasterViewController.m in Sources */,
+				0A54BFAE192622C400341AFB /* main.m in Sources */,
+				0A54BFE11926231500341AFB /* PDAnimationManager.m in Sources */,
+				0A54BFE01926231500341AFB /* PDDecayViewController.m in Sources */,
+				0A54BFE21926231500341AFB /* PDSpringViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A54BFBE192622C400341AFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54BFD0192622C400341AFB /* POP_HandappTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A54BFC8192622C400341AFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A54BF9D192622C400341AFB /* POP-Handapp */;
+			targetProxy = 0A54BFC7192622C400341AFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A54BFAA192622C400341AFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A54BFAB192622C400341AFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A54BFB3192622C400341AFB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A54BFB4192622C400341AFB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0A54BFCC192622C400341AFB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A54BFCD192622C400341AFB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A54BFD1192622C400341AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0A54BFD2192622C400341AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A54BFD4192622C400341AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POP-Handapp/POP-Handapp-Prefix.pch";
+				INFOPLIST_FILE = "POP-Handapp/POP-Handapp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A54BFD5192622C400341AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POP-Handapp/POP-Handapp-Prefix.pch";
+				INFOPLIST_FILE = "POP-Handapp/POP-Handapp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0A54BFD7192622C400341AFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POP-Handapp.app/POP-Handapp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POP-Handapp/POP-Handapp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "POP-HandappTests/POP-HandappTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0A54BFD8192622C400341AFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/POP-Handapp.app/POP-Handapp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "POP-Handapp/POP-Handapp-Prefix.pch";
+				INFOPLIST_FILE = "POP-HandappTests/POP-HandappTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A54BF99192622C400341AFB /* Build configuration list for PBXProject "POP-Handapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A54BFD1192622C400341AFB /* Debug */,
+				0A54BFD2192622C400341AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A54BFD3192622C400341AFB /* Build configuration list for PBXNativeTarget "POP-Handapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A54BFD4192622C400341AFB /* Debug */,
+				0A54BFD5192622C400341AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A54BFD6192622C400341AFB /* Build configuration list for PBXNativeTarget "POP-HandappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A54BFD7192622C400341AFB /* Debug */,
+				0A54BFD8192622C400341AFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A54BF96192622C400341AFB /* Project object */;
+}
