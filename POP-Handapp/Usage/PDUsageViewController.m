@@ -45,6 +45,9 @@
 -(void)resetCircle
 {
     [self.popCircle.layer pop_removeAllAnimations];
+    for (CAShapeLayer *layer in self.popCircle.layer.sublayers) {
+        [layer removeFromSuperlayer];
+    }
     
     self.popCircle.layer.opacity = 0.0;
     if ([self.animationType isEqualToString:@"TRANSACTION"]) {
