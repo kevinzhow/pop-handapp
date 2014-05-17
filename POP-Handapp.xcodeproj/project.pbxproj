@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A1B78BB192801C600FD5AB0 /* PDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A1B78BA192801C600FD5AB0 /* PDViewController.m */; };
 		0A54BFA2192622C400341AFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA1192622C400341AFB /* Foundation.framework */; };
 		0A54BFA4192622C400341AFB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA3192622C400341AFB /* CoreGraphics.framework */; };
 		0A54BFA6192622C400341AFB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A54BFA5192622C400341AFB /* UIKit.framework */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1B78B9192801C600FD5AB0 /* PDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDViewController.h; sourceTree = "<group>"; };
+		0A1B78BA192801C600FD5AB0 /* PDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDViewController.m; sourceTree = "<group>"; };
 		0A54BF9E192622C400341AFB /* POP-Handapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POP-Handapp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A54BFA1192622C400341AFB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0A54BFA3192622C400341AFB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -198,6 +201,8 @@
 			children = (
 				0A54BFDE1926231500341AFB /* PDSpringViewController.h */,
 				0A54BFDF1926231500341AFB /* PDSpringViewController.m */,
+				0A1B78B9192801C600FD5AB0 /* PDViewController.h */,
+				0A1B78BA192801C600FD5AB0 /* PDViewController.m */,
 			);
 			name = Spring;
 			sourceTree = "<group>";
@@ -367,6 +372,7 @@
 				0A54BFB2192622C400341AFB /* PDAppDelegate.m in Sources */,
 				0A54BFB8192622C400341AFB /* PDMasterViewController.m in Sources */,
 				0A54BFAE192622C400341AFB /* main.m in Sources */,
+				0A1B78BB192801C600FD5AB0 /* PDViewController.m in Sources */,
 				0A54BFE11926231500341AFB /* PDAnimationManager.m in Sources */,
 				0AA366F21926BD8D00502971 /* PDPropertyViewController.m in Sources */,
 				0A54BFE01926231500341AFB /* PDDecayViewController.m in Sources */,

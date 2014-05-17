@@ -149,6 +149,7 @@
     POPBasicAnimation *rotationAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
     
     rotationAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotationAnim.beginTime = CACurrentMediaTime() + 0.1;
     rotationAnim.duration = 0.3;
     rotationAnim.toValue = @(0);
     
@@ -161,8 +162,7 @@
 -(void)performTransactionAnimation
 {
     [self.popCircle pop_removeAllAnimations];
-    
-    UIGraphicsBeginImageContext(self.view.frame.size);
+
     
     //Config progress line
     CAShapeLayer *progressLayer = [CAShapeLayer layer];
@@ -193,7 +193,7 @@
     boundsAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
         if (finished) {
             
-            
+            UIGraphicsBeginImageContextWithOptions(self.popCircle.frame.size, NO, 0.0);
             POPBasicAnimation *progressBoundsAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
             progressBoundsAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
             progressBoundsAnim.duration = 1.0;
