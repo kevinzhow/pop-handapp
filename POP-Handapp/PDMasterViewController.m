@@ -41,9 +41,9 @@
         
         [[segue destinationViewController] setAnimationType:@"FLYIN"];
         
-    }else if([[segue identifier] isEqualToString:@"showTRANSACTION"]) {
+    }else if([[segue identifier] isEqualToString:@"showTRANSFORM"]) {
         
-        [[segue destinationViewController] setAnimationType:@"TRANSACTION"];
+        [[segue destinationViewController] setAnimationType:@"TRANSFORM"];
     }
     
 }

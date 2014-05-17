@@ -35,7 +35,7 @@
     }else if ([self.animationType isEqualToString:@"FLYIN"])
     {
         [self performFlyInAnimation];
-    }else if ([self.animationType isEqualToString:@"TRANSACTION"])
+    }else if ([self.animationType isEqualToString:@"TRANSFORM"])
     {
         [self performTransactionAnimation];
     }
@@ -50,7 +50,7 @@
     }
     
     self.popCircle.layer.opacity = 0.0;
-    if ([self.animationType isEqualToString:@"TRANSACTION"]) {
+    if ([self.animationType isEqualToString:@"TRANSFORM"]) {
          self.popCircle.layer.opacity = 1.0;
     }
     self.popCircle.layer.transform = CATransform3DIdentity;
