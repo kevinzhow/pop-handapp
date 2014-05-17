@@ -30,7 +30,16 @@
 
 - (IBAction)animateAction:(id)sender {
     [self resetCircle];
-    [self performPopUpAnimation];
+    if ([self.animationType isEqualToString:@"POPUP"]) {
+        [self performPopUpAnimation];
+    }else if ([self.animationType isEqualToString:@"FLYIN"])
+    {
+        [self performFlyInAnimation];
+    }else if ([self.animationType isEqualToString:@"TRANSACTION"])
+    {
+        [self performTransactionAnimation];
+    }
+    
 }
 
 -(void)resetCircle
@@ -38,6 +47,9 @@
     [self.popCircle.layer pop_removeAllAnimations];
     
     self.popCircle.layer.opacity = 0.0;
+    if ([self.animationType isEqualToString:@"TRANSACTION"]) {
+         self.popCircle.layer.opacity = 1.0;
+    }
     self.popCircle.layer.transform = CATransform3DIdentity;
     [self.popCircle.layer setMasksToBounds:YES];
     [self.popCircle.layer setBackgroundColor:[UIColor colorWithRed:0.16 green:0.72 blue:1.0 alpha:1.0].CGColor];
@@ -83,8 +95,7 @@
     POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPosition];
     
     anim.velocity = [NSValue valueWithCGPoint:CGPointMake(velocity.x, velocity.y)];
-        
-    anim.fromValue = [NSValue valueWithCGPoint:CGPointMake(self.popCircle.center.x, self.popCircle.center.y)];
+    
     
     anim.deceleration = 0.998;
     
@@ -111,13 +122,102 @@
     [self.popCircle.layer pop_addAnimation:opacityAnim forKey:@"AnimateOpacity"];
 }
 
+-(void)performFlyInAnimation
+{
+    [self.popCircle pop_removeAllAnimations];
+    
+    [self.popCircle.layer setCornerRadius:5.0f];
+    [self.popCircle setBounds:CGRectMake(0.0f, 0.0f, 160.0f, 230.0f)];
+    CGAffineTransform rotateTransform = CGAffineTransformMakeRotation(-M_PI_4/8.0);
+    [self.popCircle.layer setAffineTransform:rotateTransform];
+    
+    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    anim.springBounciness = 6;
+    anim.springSpeed = 10;
+    anim.fromValue = @-200;
+    anim.toValue = @(self.view.center.y);
+    
+    POPBasicAnimation *opacityAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+    
+    opacityAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    opacityAnim.duration = 0.25;
+    opacityAnim.toValue = @1.0;
+    
+    POPBasicAnimation *rotationAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    
+    rotationAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    rotationAnim.duration = 0.3;
+    rotationAnim.toValue = @(0);
+    
+    [self.popCircle.layer pop_addAnimation:anim forKey:@"AnimationScale"];
+    [self.popCircle.layer pop_addAnimation:opacityAnim forKey:@"AnimateOpacity"];
+    [self.popCircle.layer pop_addAnimation:rotationAnim forKey:@"AnimateRotation"];
+}
+
+
+-(void)performTransactionAnimation
+{
+    [self.popCircle pop_removeAllAnimations];
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    
+    //Config progress line
+    CAShapeLayer *progressLayer = [CAShapeLayer layer];
+    progressLayer.strokeColor = [UIColor colorWithWhite:1.0 alpha:0.98].CGColor;
+    progressLayer.lineCap   = kCALineCapRound;
+    progressLayer.lineJoin  = kCALineJoinBevel;
+    progressLayer.lineWidth = 26.0;
+    progressLayer.strokeEnd = 0.0;
+    
+    UIBezierPath *progressline = [UIBezierPath bezierPath];
+    [progressline moveToPoint:CGPointMake(25.0, 25.0)];
+    [progressline addLineToPoint:CGPointMake(700.0, 25.0)];
+    progressLayer.path = progressline.CGPath;
+    
+    [self.popCircle.layer addSublayer:progressLayer];
+    //
+
+    POPSpringAnimation *scaleAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
+    scaleAnim.springBounciness = 5;
+    scaleAnim.springSpeed = 12;
+    scaleAnim.toValue = [NSValue valueWithCGPoint:CGPointMake(0.3, 0.3)];
+    
+    POPSpringAnimation *boundsAnim = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerBounds];
+    boundsAnim.springBounciness = 10;
+    boundsAnim.springSpeed = 6;
+    boundsAnim.toValue = [NSValue valueWithCGRect:CGRectMake(0, 0, 800, 50)];
+    
+    boundsAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+        if (finished) {
+            
+            
+            POPBasicAnimation *progressBoundsAnim = [POPBasicAnimation animationWithPropertyNamed:kPOPShapeLayerStrokeEnd];
+            progressBoundsAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            progressBoundsAnim.duration = 1.0;
+            progressBoundsAnim.fromValue = @0.0;
+            progressBoundsAnim.toValue = @1.0;
+            
+            [progressLayer pop_addAnimation:progressBoundsAnim forKey:@"AnimateBounds"];
+            progressBoundsAnim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
+                if (finished) {
+                    UIGraphicsEndImageContext();
+                }
+            };
+            
+            
+        }
+    };
+    
+    [self.popCircle.layer pop_addAnimation:boundsAnim forKey:@"AnimateBounds"];
+    [self.popCircle.layer pop_addAnimation:scaleAnim forKey:@"AnimateScale"];
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     [self setPopCircle];
-    
-    
     // Do any additional setup after loading the view.
 }
 

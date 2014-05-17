@@ -8,7 +8,7 @@
 
 #import "PDMasterViewController.h"
 
-#import "PDSpringViewController.h"
+#import "PDUsageViewController.h"
 
 @interface PDMasterViewController ()
 @end
@@ -30,6 +30,24 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"showPOPUP"]) {
+        
+        [[segue destinationViewController] setAnimationType:@"POPUP"];
+        
+    }else if([[segue identifier] isEqualToString:@"showFLYIN"]) {
+        
+        [[segue destinationViewController] setAnimationType:@"FLYIN"];
+        
+    }else if([[segue identifier] isEqualToString:@"showTRANSACTION"]) {
+        
+        [[segue destinationViewController] setAnimationType:@"TRANSACTION"];
+    }
+    
+}
+
 
 
 @end

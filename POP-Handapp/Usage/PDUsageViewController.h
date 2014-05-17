@@ -13,5 +13,5 @@
 
 @property (nonatomic) UIView * popCircle;
 - (IBAction)animateAction:(id)sender;
-
+@property (nonatomic) NSString * animationType;
 @end
