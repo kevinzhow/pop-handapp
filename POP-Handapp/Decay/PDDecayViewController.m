@@ -22,9 +22,6 @@
 
     [self resetCircle];
     
-    UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
-//    [self.popCircle addGestureRecognizer:pan];
-    
     [self.view addSubview:self.popCircle];
     
     self.animationTypes = @[kPOPLayerBackgroundColor,kPOPLayerBounds,kPOPLayerOpacity,kPOPLayerPosition, kPOPLayerPositionX ,kPOPLayerRotation,
@@ -37,35 +34,10 @@
     
 }
 
-- (void)handlePan:(UIPanGestureRecognizer *)pan {
-	switch (pan.state) {
-		case UIGestureRecognizerStateBegan:
-		case UIGestureRecognizerStateChanged: {
-			CGPoint translation = [pan translationInView:self.view];
-            
-			CGPoint center = self.popCircle.center;
-			center.x += translation.x;
-			center.y += translation.y;
-			self.popCircle.center = center;
-            
-			[pan setTranslation:CGPointZero inView:self.popCircle];
-			break;
-		}
-            
-		case UIGestureRecognizerStateEnded:
-		case UIGestureRecognizerStateCancelled: {
-
-					break;
-		}
-            
-		default:
-			break;
-	}
-}
 
 -(void)resetCircle
 {
-    [self.popCircle pop_removeAllAnimations];
+    [self.popCircle.layer pop_removeAllAnimations];
     self.popCircle.layer.opacity = 1.0;
     self.popCircle.layer.transform = CATransform3DIdentity;
     [self.popCircle.layer setMasksToBounds:YES];
@@ -79,7 +51,8 @@
 -(void)performAnimation
 {
     
-    [self.popCircle pop_removeAllAnimations];
+    [self.popCircle.layer pop_removeAllAnimations];
+    
     POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:self.animationType];
     
     [PDAnimationManager decayObject:self.popCircle.layer configAnimation:anim WithType:self.animationType andAnimated:self.animated andVelocitySlider:self.velocitySlider];
