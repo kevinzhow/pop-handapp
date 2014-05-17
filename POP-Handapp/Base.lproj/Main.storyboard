@@ -178,7 +178,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="ssk-ub-6sy" kind="push" identifier="showTRANSACTION" id="Dbc-wE-Leb"/>
+                                            <segue destination="ssk-ub-6sy" kind="push" identifier="showTRANSFORM" id="Dbc-wE-Leb"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
