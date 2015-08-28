@@ -24,11 +24,10 @@
 		0A54BFE01926231500341AFB /* PDDecayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDB1926231500341AFB /* PDDecayViewController.m */; };
 		0A54BFE11926231500341AFB /* PDAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDD1926231500341AFB /* PDAnimationManager.m */; };
 		0A54BFE21926231500341AFB /* PDSpringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A54BFDF1926231500341AFB /* PDSpringViewController.m */; };
-		0A54BFE619265D0F00341AFB /* POP-Handapp-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A54BFE419265D0F00341AFB /* POP-Handapp-Info.plist */; };
 		0A748FDA1926BA540067EFCB /* PDBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A748FD91926BA540067EFCB /* PDBasicViewController.m */; };
 		0A927F2A19273484005E44E9 /* PDUsageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A927F2919273484005E44E9 /* PDUsageViewController.m */; };
 		0AA366F21926BD8D00502971 /* PDPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA366F11926BD8D00502971 /* PDPropertyViewController.m */; };
-		390FA0C4D62045DA8353F441 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 813F742214324DAFAA5B19CB /* libPods.a */; };
+		635184C7E64A44A00422886D /* libPods-POP-Handapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6476480D5E172CCBCE0654B0 /* libPods-POP-Handapp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +72,9 @@
 		0A927F2919273484005E44E9 /* PDUsageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDUsageViewController.m; path = Usage/PDUsageViewController.m; sourceTree = "<group>"; };
 		0AA366F01926BD8D00502971 /* PDPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDPropertyViewController.h; path = Property/PDPropertyViewController.h; sourceTree = "<group>"; };
 		0AA366F11926BD8D00502971 /* PDPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDPropertyViewController.m; path = Property/PDPropertyViewController.m; sourceTree = "<group>"; };
-		3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		813F742214324DAFAA5B19CB /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6476480D5E172CCBCE0654B0 /* libPods-POP-Handapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-POP-Handapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1C5B8E9285FD466BA1841F5 /* Pods-POP-Handapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POP-Handapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-POP-Handapp/Pods-POP-Handapp.debug.xcconfig"; sourceTree = "<group>"; };
+		DC54A72428B529594176B17D /* Pods-POP-Handapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POP-Handapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-POP-Handapp/Pods-POP-Handapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				0A54BFA4192622C400341AFB /* CoreGraphics.framework in Frameworks */,
 				0A54BFA6192622C400341AFB /* UIKit.framework in Frameworks */,
 				0A54BFA2192622C400341AFB /* Foundation.framework in Frameworks */,
-				390FA0C4D62045DA8353F441 /* libPods.a in Frameworks */,
+				635184C7E64A44A00422886D /* libPods-POP-Handapp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 				0A54BFC9192622C400341AFB /* POP-HandappTests */,
 				0A54BFA0192622C400341AFB /* Frameworks */,
 				0A54BF9F192622C400341AFB /* Products */,
-				3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */,
+				A3083C4C5181EAB4EFBE4CF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,7 +129,7 @@
 				0A54BFA3192622C400341AFB /* CoreGraphics.framework */,
 				0A54BFA5192622C400341AFB /* UIKit.framework */,
 				0A54BFC3192622C400341AFB /* XCTest.framework */,
-				813F742214324DAFAA5B19CB /* libPods.a */,
+				6476480D5E172CCBCE0654B0 /* libPods-POP-Handapp.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -229,6 +229,15 @@
 			name = Property;
 			sourceTree = "<group>";
 		};
+		A3083C4C5181EAB4EFBE4CF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1C5B8E9285FD466BA1841F5 /* Pods-POP-Handapp.debug.xcconfig */,
+				DC54A72428B529594176B17D /* Pods-POP-Handapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -276,7 +285,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PD;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = Piner;
 				TargetAttributes = {
 					0A54BFC1192622C400341AFB = {
@@ -311,7 +320,6 @@
 				0A54BFBD192622C400341AFB /* Images.xcassets in Resources */,
 				0A54BFAC192622C400341AFB /* InfoPlist.strings in Resources */,
 				0A54BFB5192622C400341AFB /* Main.storyboard in Resources */,
-				0A54BFE619265D0F00341AFB /* POP-Handapp-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-POP-Handapp/Pods-POP-Handapp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB4E7CF38A974965BCE2803D /* Check Pods Manifest.lock */ = {
@@ -493,7 +501,7 @@
 		};
 		0A54BFD4192622C400341AFB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */;
+			baseConfigurationReference = B1C5B8E9285FD466BA1841F5 /* Pods-POP-Handapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -507,7 +515,7 @@
 		};
 		0A54BFD5192622C400341AFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C04D2DA8E7C431FA18ECB84 /* Pods.xcconfig */;
+			baseConfigurationReference = DC54A72428B529594176B17D /* Pods-POP-Handapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
